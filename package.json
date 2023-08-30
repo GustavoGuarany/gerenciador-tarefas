@@ -1,7 +1,22 @@
 {
   "name": "app",
   "private": "true",
+  "version": "0.1.0",
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets"
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
+    "build:css": "tailwindcss --postcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "esbuild": "^0.19.2",
+    "@hotwired/stimulus": "^3.2.2",
+    "@hotwired/turbo-rails": "^7.3.0",
+    "@rails/actioncable": "^7.0.0",
+    "@rails/activestorage": "^7.0.0",
+    "@rails/ujs": "^7.0.0",
+    "debounce": "^1.2.1",
+    "postcss-import": "^14.0.2",
+    "postcss-resolve-urls": "^0.0.3",
+    "turbolinks": "^5.2.0"
   }
 }
