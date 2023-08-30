@@ -2,7 +2,6 @@
 # exit on error
 set -o errexit
 
-yarn install
 
 bundle install
 bundle exec rails assets:precompile
